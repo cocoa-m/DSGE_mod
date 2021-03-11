@@ -1,5 +1,5 @@
 /*
- * This file implements the baseline Classical Monetary Economy model of Jordi Galí (2015): Monetary Policy, Inflation,
+ * This file implements the baseline Classical Monetary Economy model of Jordi GalÃ­ (2015): Monetary Policy, Inflation,
  * and the Business Cycle, Princeton University Press, Second Edition, Chapter 2
  *
  * Note that this mod-file implements the non-linear first order conditions and that the IRFs show the linear deviations
@@ -130,7 +130,8 @@ R=1/betta;
 Pi=1;
 Q=1/R;
 realinterest=R;
-N=(1-alppha)^(1/((1-siggma)*alppha+varphi+siggma));
+%N=(1-alppha)^(1/((1-siggma)*alppha+varphi+siggma));
+N=(1-alppha)^(1/((1-alppha)*siggma+varphi+alppha));
 C=A*N^(1-alppha);
 W_real=(1-alppha)*A*N^(-alppha);
 Y=C;
